@@ -143,14 +143,6 @@
             }
         },
         {
-            "Key": "85c36831-44ce-4714-9db5-50b5007cd172",
-            "Value": {
-                "id": "0ef07ece-e87b-4569-8145-02d19446ede1",
-                "resourcePath": "objects\\object2\\object2.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "9ef067f3-d815-4966-9199-759c1ecc140f",
             "Value": {
                 "id": "6a701c30-41ce-4909-a327-824bc081691a",
@@ -202,7 +194,7 @@
             "Key": "d430e7cc-f729-49b1-9928-ef4cc5d2b808",
             "Value": {
                 "id": "52fefe65-c602-483d-83af-23bf8dbd6ce6",
-                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourcePath": "tilesets\\tiles_tiles\\tiles_tiles.yy",
                 "resourceType": "GMTileSet"
             }
         },
