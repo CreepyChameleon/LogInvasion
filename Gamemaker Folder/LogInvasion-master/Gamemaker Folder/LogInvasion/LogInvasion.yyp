@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "ee47084e-e358-4a57-b3d1-4aee16c01116",
+            "Value": {
+                "id": "a0f96a16-4db4-47f7-86e2-fbed54808cf3",
+                "resourcePath": "objects\\obj_movetile\\obj_movetile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f3d800db-7f9c-4b20-a997-5366a25fd00c",
             "Value": {
                 "id": "8e7ab180-e8f8-4db0-a676-d85f1c2aafce",

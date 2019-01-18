@@ -64,15 +64,15 @@ if(supercharge == 110)
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 55B89EA4
-/// @DnDArgument : "code" "//Left & right$(13_10)if keyboard_check_pressed(ord("D")) {$(13_10)movex = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)image_xscale = 1;$(13_10)}$(13_10)if keyboard_check_pressed(ord("A")) {$(13_10)movex = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)image_xscale = -1;$(13_10)}$(13_10)$(13_10)if moving > 0 and movex = true {$(13_10)moving -= 1$(13_10)x+= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}$(13_10)//Up and down$(13_10)if keyboard_check_pressed(ord("W")) {$(13_10)movey = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)}$(13_10)if keyboard_check_pressed(ord("S")) {$(13_10)movey = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)}$(13_10)$(13_10)if moving > 0 and movey = true {$(13_10)moving -= 1$(13_10)y-= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}"
+/// @DnDArgument : "code" "//Left & right$(13_10)if keyboard_check_pressed(ord("D")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)image_xscale = 1;$(13_10)}$(13_10)if keyboard_check_pressed(ord("A")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)image_xscale = -1;$(13_10)}$(13_10)$(13_10)if moving > 0 and movex = true {$(13_10)moving -= 1$(13_10)x+= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}$(13_10)//Up and down$(13_10)if keyboard_check_pressed(ord("W")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)}$(13_10)if keyboard_check_pressed(ord("S")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)}$(13_10)$(13_10)if moving > 0 and movey = true {$(13_10)moving -= 1$(13_10)y-= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}"
 //Left & right
-if keyboard_check_pressed(ord("D")) {
+if keyboard_check_pressed(ord("D")) and moving == 0 {
 movex = true;
 dir = 1;
 moving = 60;
 image_xscale = 1;
 }
-if keyboard_check_pressed(ord("A")) {
+if keyboard_check_pressed(ord("A")) and moving == 0 {
 movex = true;
 dir = -1;
 moving = 60;
@@ -93,12 +93,12 @@ image_speed = 0;
 image_index = 0;
 }
 //Up and down
-if keyboard_check_pressed(ord("W")) {
+if keyboard_check_pressed(ord("W")) and moving == 0 {
 movey = true;
 dir = 1;
 moving = 60;
 }
-if keyboard_check_pressed(ord("S")) {
+if keyboard_check_pressed(ord("S")) and moving == 0 {
 movey = true;
 dir = -1;
 moving = 60;
