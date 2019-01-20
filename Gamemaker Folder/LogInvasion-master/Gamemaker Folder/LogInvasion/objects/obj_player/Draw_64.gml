@@ -25,11 +25,24 @@ draw_set_alpha(l43CB4437_0 / $ff);
 
 if supercharge == 100
 {
-	draw_rectangle(75 + chargewave, 35, 75.1 + chargewave, 55, 0);
-	chargewave += 5;
+	if wavechoice == 1
+	{
+		draw_rectangle_colour(75, 35, 265, 55, $FFFF2200 & $FFFFFF, $FFFF5C49 & $FFFFFF, $FFFF9F5B & $FFFFFF, $FFFF6D44 & $FFFFFF, 0);
+		draw_rectangle_colour(75, 35, 75 + chargewave, 55, $FFFF9F5B & $FFFFFF, $FFFF6D44 & $FFFFFF, $FFFF2200 & $FFFFFF, $FFFF5C49 & $FFFFFF, 0);
+		chargewave += 5;
+	}
+	if wavechoice == -1
+	{
+		draw_rectangle_colour(75, 35, 265, 55, $FFFF9F5B & $FFFFFF, $FFFF6D44 & $FFFFFF, $FFFF2200 & $FFFFFF, $FFFF5C49 & $FFFFFF, 0);
+		draw_rectangle_colour(75, 35, 75 + chargewave, 55, $FFFF2200 & $FFFFFF, $FFFF5C49 & $FFFFFF, $FFFF9F5B & $FFFFFF, $FFFF6D44 & $FFFFFF, 0);
+		chargewave += 5;
+	}
 }    
-if chargewave > 190 then chargewave = 0;
-
+if chargewave > 190 
+{
+	chargewave = 0;
+	wavechoice *= -1;
+}
 draw_set_colour($FF000000 & $ffffff);
 var l0D4E1B77_0=($FF000000 >> 24);
 draw_set_alpha(l0D4E1B77_0 / $ff);
@@ -37,3 +50,5 @@ draw_set_alpha(l0D4E1B77_0 / $ff);
 draw_set_font(font_impact);
 
 draw_text(80, 35, string("SUPERCHARGE: ") + string(string(supercharge) + "%"));
+
+show_debug_message(wavechoice)
