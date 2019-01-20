@@ -50,13 +50,13 @@ superchargemeter = supercharge * 2;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 133F5763
-/// @DnDArgument : "code" "if(supercharge == 0)$(13_10){$(13_10)	superchargemeter = 10;$(13_10)}$(13_10)$(13_10)if(supercharge == 110)$(13_10){$(13_10)	supercharge = 100;$(13_10)}"
+/// @DnDArgument : "code" "if(supercharge == 0)$(13_10){$(13_10)	superchargemeter = 10;$(13_10)}$(13_10)$(13_10)if(supercharge > 100)$(13_10){$(13_10)	supercharge = 100;$(13_10)}"
 if(supercharge == 0)
 {
 	superchargemeter = 10;
 }
 
-if(supercharge == 110)
+if(supercharge > 100)
 {
 	supercharge = 100;
 }
