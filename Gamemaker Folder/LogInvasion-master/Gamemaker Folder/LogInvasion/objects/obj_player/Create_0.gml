@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 7B33B046
-/// @DnDArgument : "code" "hsp = 0;$(13_10)vsp = 0;$(13_10)walksp = 120;$(13_10)go = true;$(13_10)movex = false;$(13_10)movey = false;$(13_10)moving = 0;$(13_10)$(13_10)supercharge = 0;$(13_10)superchargemeter = 0;$(13_10)$(13_10)//window_set_fullscreen(true);"
+/// @DnDArgument : "code" "hsp = 0;$(13_10)vsp = 0;$(13_10)walksp = 120;$(13_10)go = true;$(13_10)movex = false;$(13_10)movey = false;$(13_10)moving = 0;$(13_10)attacking = false;$(13_10)hit = false;$(13_10)$(13_10)supercharge = 0;$(13_10)superchargemeter = 0;$(13_10)$(13_10)//window_set_fullscreen(true);"
 hsp = 0;
 vsp = 0;
 walksp = 120;
@@ -9,6 +9,8 @@ go = true;
 movex = false;
 movey = false;
 moving = 0;
+attacking = false;
+hit = false;
 
 supercharge = 0;
 superchargemeter = 0;

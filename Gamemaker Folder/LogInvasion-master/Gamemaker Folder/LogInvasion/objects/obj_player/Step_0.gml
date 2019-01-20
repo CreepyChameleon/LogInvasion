@@ -64,7 +64,10 @@ if(supercharge == 110)
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 55B89EA4
-/// @DnDArgument : "code" "//Left & right$(13_10)if keyboard_check_pressed(ord("D")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)image_xscale = 1;$(13_10)}$(13_10)if keyboard_check_pressed(ord("A")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)image_xscale = -1;$(13_10)}$(13_10)$(13_10)if moving > 0 and movex = true {$(13_10)moving -= 1$(13_10)x+= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}$(13_10)//Up and down$(13_10)if keyboard_check_pressed(ord("W")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)}$(13_10)if keyboard_check_pressed(ord("S")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)}$(13_10)$(13_10)if moving > 0 and movey = true {$(13_10)moving -= 1$(13_10)y -= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}"
+/// @DnDArgument : "code" "if (alarm[0] = -1) {$(13_10)	obj_player.attacking = false;$(13_10)}$(13_10)//Left & right$(13_10)if keyboard_check_pressed(ord("D")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)image_xscale = 1;$(13_10)}$(13_10)if keyboard_check_pressed(ord("A")) and moving == 0 {$(13_10)movex = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)image_xscale = -1;$(13_10)}$(13_10)$(13_10)if moving > 0 and movex = true {$(13_10)moving -= 1$(13_10)x+= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 and sprite_index = spr_knight {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}$(13_10)//Up and down$(13_10)if keyboard_check_pressed(ord("W")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = 1;$(13_10)moving = 60;$(13_10)}$(13_10)if keyboard_check_pressed(ord("S")) and moving == 0 {$(13_10)movey = true;$(13_10)dir = -1;$(13_10)moving = 60;$(13_10)}$(13_10)$(13_10)if moving > 0 and movey = true {$(13_10)moving -= 1$(13_10)y -= 2*dir$(13_10)image_speed = 1;$(13_10)}$(13_10)$(13_10)$(13_10)if moving <= 0 and sprite_index = spr_knight {$(13_10)movex = false;$(13_10)movey = false;$(13_10)image_speed = 0;$(13_10)image_index = 0;$(13_10)}"
+if (alarm[0] = -1) {
+	obj_player.attacking = false;
+}
 //Left & right
 if keyboard_check_pressed(ord("D")) and moving == 0 {
 movex = true;
@@ -86,7 +89,7 @@ image_speed = 1;
 }
 
 
-if moving <= 0 {
+if moving <= 0 and sprite_index = spr_knight {
 movex = false;
 movey = false;
 image_speed = 0;
@@ -111,7 +114,7 @@ image_speed = 1;
 }
 
 
-if moving <= 0 {
+if moving <= 0 and sprite_index = spr_knight {
 movex = false;
 movey = false;
 image_speed = 0;
