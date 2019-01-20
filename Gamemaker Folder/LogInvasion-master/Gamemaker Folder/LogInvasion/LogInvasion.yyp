@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "6d5b86d1-e305-4edd-95fc-703e1e512d8d",
+            "Value": {
+                "id": "b7641266-eefd-4798-a1c1-f9db0cf32280",
+                "resourcePath": "sounds\\soldier_attack\\soldier_attack.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "900878cb-a1f1-4ae0-99b3-b66ec6c608f7",
             "Value": {
                 "id": "2bd5bc62-4759-41b2-b4a4-60e2fd87f898",
