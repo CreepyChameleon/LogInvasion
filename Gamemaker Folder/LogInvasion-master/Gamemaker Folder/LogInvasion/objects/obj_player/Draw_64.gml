@@ -13,37 +13,22 @@ draw_set_alpha(l425B2888_0 / $ff);
 
 draw_rectangle(75, 35, 265, 55, 0);
 
-if supercharge == 100
-{
-	var randcolor = choose(1, 2, 3);
-	if randcolor == 1
-	{
-		draw_set_colour($FFFFAC1D & $ffffff);
-		var l7C2CADB4_0=($FFFFAC1D >> 24);
-		draw_set_alpha(l7C2CADB4_0 / $ff);
-
-	}
-	if randcolor == 2
-	{
-		draw_set_colour($FFFF4F49 & $ffffff);
-		var l5078CB09_0=($FFFF4F49 >> 24);
-		draw_set_alpha(l5078CB09_0 / $ff);
-	}
-	if randcolor == 3
-	{
-		draw_set_colour($FFFF0008 & $ffffff);
-		var l49E9AC62_0=($FFFF0008 >> 24);
-		draw_set_alpha(l49E9AC62_0 / $ff);
-	}
-}
-else
-{
-	draw_set_colour($FFFFAC1D & $ffffff);
-	var l55A09E89_0=($FFFFAC1D >> 24);
-	draw_set_alpha(l55A09E89_0 / $ff);
-}
+draw_set_colour($FFFFAC1D & $ffffff);
+var l55A09E89_0=($FFFFAC1D >> 24);
+draw_set_alpha(l55A09E89_0 / $ff);
 
 draw_rectangle(75, 35, 65 + superchargemeter, 55, 0);
+
+draw_set_colour($FFFFFFFF & $ffffff);
+var l43CB4437_0=($FFFFFFFF >> 24);
+draw_set_alpha(l43CB4437_0 / $ff);
+
+if supercharge == 100
+{
+	draw_rectangle(75 + chargewave, 35, 75.1 + chargewave, 55, 0);
+	chargewave += 5;
+}    
+if chargewave > 190 then chargewave = 0;
 
 draw_set_colour($FF000000 & $ffffff);
 var l0D4E1B77_0=($FF000000 >> 24);
