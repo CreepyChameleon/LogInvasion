@@ -64,22 +64,26 @@ draw_text(80, 35, string("SUPERCHARGE: ") + string(string(supercharge) + "%"));
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 0B9A2C53
-/// @DnDArgument : "code" "/*if point_in_rectangle(window_mouse_get_x(),window_mouse_get_y(),865,865,635,635)$(13_10){ $(13_10)	var hover=1;$(13_10)} $(13_10)else $(13_10){ $(13_10)	var hover=0; $(13_10)}$(13_10)draw_sprite(spr_player,hover,900,700);$(13_10)if (distance_to_point(mouse_x,mouse_y)<=0)$(13_10){$(13_10)if mouse_check_button(mb_left)$(13_10)show_debug_message("test")$(13_10)//draw_sprite(spr_player,2,865,360); $(13_10)}$(13_10)draw_set_color(make_colour_rgb(163,190,240));$(13_10)draw_set_font(font_impact);$(13_10)draw_text(865,350,"New  Game");"
-/*if point_in_rectangle(window_mouse_get_x(),window_mouse_get_y(),865,865,635,635)
-{ 
-	var hover=1;
-} 
+/// @DnDArgument : "code" "if supercharge >= 100$(13_10){$(13_10)	var hover=0;$(13_10)	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),934,705,870,645,988,765) //checks if touching button while at 100 SC$(13_10)	{ $(13_10)		var hover=2;$(13_10)		if mouse_check_button_pressed(mb_left) //checks if button is clicked$(13_10)		{$(13_10)			show_debug_message("super ability used");$(13_10)			supercharge = 0;$(13_10)			damageMutiplier = 2;$(13_10)		}$(13_10)	//point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),870,645,988,765)$(13_10)	}$(13_10)}$(13_10)$(13_10)else $(13_10){ $(13_10)	var hover=1; $(13_10)}$(13_10)$(13_10)draw_sprite(spr_superButton,hover,870,640);"
+if supercharge >= 100
+{
+	var hover=0;
+	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),934,705,870,645,988,765) //checks if touching button while at 100 SC
+	{ 
+		var hover=2;
+		if mouse_check_button_pressed(mb_left) //checks if button is clicked
+		{
+			show_debug_message("super ability used");
+			supercharge = 0;
+			damageMutiplier = 2;
+		}
+	//point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),870,645,988,765)
+	}
+}
+
 else 
 { 
-	var hover=0; 
+	var hover=1; 
 }
-draw_sprite(spr_player,hover,900,700);
-if (distance_to_point(mouse_x,mouse_y)<=0)
-{
-if mouse_check_button(mb_left)
-show_debug_message("test")
-//draw_sprite(spr_player,2,865,360); 
-}
-draw_set_color(make_colour_rgb(163,190,240));
-draw_set_font(font_impact);
-draw_text(865,350,"New  Game");/**/
+
+draw_sprite(spr_superButton,hover,870,640);
