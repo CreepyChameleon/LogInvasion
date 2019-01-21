@@ -64,22 +64,21 @@ draw_text(80, 35, string("SUPERCHARGE: ") + string(string(supercharge) + "%"));
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 0B9A2C53
-/// @DnDArgument : "code" "if supercharge >= 100$(13_10){$(13_10)	var hover=0;$(13_10)	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),934,705,870,645,988,765) //checks if touching button while at 100 SC$(13_10)	{ $(13_10)		var hover=2;$(13_10)		if mouse_check_button_pressed(mb_left) //checks if button is clicked$(13_10)		{$(13_10)			show_debug_message("super ability used");$(13_10)			supercharge = 0;$(13_10)			damageMutiplier = 2;$(13_10)		}$(13_10)	//point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),870,645,988,765)$(13_10)	}$(13_10)}$(13_10)$(13_10)else $(13_10){ $(13_10)	var hover=1; $(13_10)}$(13_10)$(13_10)draw_sprite(spr_superButton,hover,870,640);"
+/// @DnDArgument : "code" "if supercharge >= 100$(13_10){//$(13_10)	var hover=0;$(13_10)	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,645) or point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,765) //checks if touching button while at 100 SC$(13_10)	{///$(13_10)		var hover=2;$(13_10)		if mouse_check_button_pressed(mb_left) //checks if button is clicked$(13_10)		{////$(13_10)			show_debug_message("super ability used");$(13_10)			supercharge = 0;$(13_10)			damageMutiplier = 2;$(13_10)		}////$(13_10)	}///$(13_10)}//$(13_10)$(13_10)else $(13_10){ $(13_10)	var hover=1; $(13_10)}$(13_10)$(13_10)draw_sprite(spr_superButton,hover,870,640);"
 if supercharge >= 100
-{
+{//
 	var hover=0;
-	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),934,705,870,645,988,765) //checks if touching button while at 100 SC
-	{ 
+	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,645) or point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,765) //checks if touching button while at 100 SC
+	{///
 		var hover=2;
 		if mouse_check_button_pressed(mb_left) //checks if button is clicked
-		{
+		{////
 			show_debug_message("super ability used");
 			supercharge = 0;
 			damageMutiplier = 2;
-		}
-	//point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),870,645,988,765)
-	}
-}
+		}////
+	}///
+}//
 
 else 
 { 
