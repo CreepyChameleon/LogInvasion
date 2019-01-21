@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "b0a3bafe-a409-4330-b1b6-6e76e4adc19a",
+            "Value": {
+                "id": "87674fe6-9e11-467a-8b3c-4de5724664f3",
+                "resourcePath": "sounds\\soldier_super\\soldier_super.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b1b8b1f5-9ab4-470d-aa43-2602447243d7",
             "Value": {
                 "id": "6d294aa3-6c45-4946-859a-436931f3e4c2",
