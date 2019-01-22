@@ -113,3 +113,14 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 {
 	supercharge += -10;
 }
+//Glowing movement tiles
+/*if soldierTurn = true*/
+if place_empty(obj_player.x+120, obj_player.y) and moving == 0 {
+instance_create_layer(obj_player.x+120,obj_player.y,"instance_player",obj_titlecontrol);
+instance_create_layer(obj_player.x-120,obj_player.y,"instance_player",obj_titlecontrol);
+instance_create_layer(obj_player.x,obj_player.y+120,"instance_player",obj_titlecontrol);
+instance_create_layer(obj_player.x,obj_player.y-120,"instance_player",obj_titlecontrol);
+}
+if obj_player.movex = true or obj_player.movey = true {
+	instance_destroy(obj_titlecontrol);
+}
