@@ -115,12 +115,26 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 }
 //Glowing movement tiles
 /*if soldierTurn = true*/
-if place_empty(obj_player.x+120, obj_player.y) and moving == 0 {
-instance_create_layer(obj_player.x+120,obj_player.y,"instance_player",obj_titlecontrol);
-instance_create_layer(obj_player.x-120,obj_player.y,"instance_player",obj_titlecontrol);
-instance_create_layer(obj_player.x,obj_player.y+120,"instance_player",obj_titlecontrol);
-instance_create_layer(obj_player.x,obj_player.y-120,"instance_player",obj_titlecontrol);
+if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 {
+instance_create_layer(obj_player.x+70,obj_player.y-45,"instance_player",obj_move);
+instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
+instance_create_layer(obj_player.x-170,obj_player.y-45,"instance_player",obj_move);
+instance_create_layer(obj_player.x-290,obj_player.y-45,"instance_player",obj_move);
+instance_create_layer(obj_player.x-50,obj_player.y+80,"instance_player",obj_move);
+instance_create_layer(obj_player.x-50,obj_player.y+200,"instance_player",obj_move);
+instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
+instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_move);
 }
 if obj_player.movex = true or obj_player.movey = true {
-	instance_destroy(obj_titlecontrol);
+	instance_destroy(obj_move);
+}
+	/*
+}
+if instance_position(mouse_x, mouse_y, obj_move) {
+	obj_move.image_index = 1
+	obj_move.image_speed = 0
+}
+else {
+	obj_move.image_index = 0
+	obj_move.image_speed = 0
 }
