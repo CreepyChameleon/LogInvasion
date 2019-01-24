@@ -128,13 +128,12 @@ instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_mov
 if obj_player.movex = true or obj_player.movey = true {
 	instance_destroy(obj_move);
 }
-	/*
+if obj_player.superused = true {
+instance_create_layer(obj_player.x+310,obj_player.y-45,"instance_player",obj_supermove);
+instance_create_layer(obj_player.x-410,obj_player.y-45,"instance_player",obj_supermove);
+instance_create_layer(obj_player.x-50,obj_player.y+320,"instance_player",obj_supermove);
+instance_create_layer(obj_player.x-50,obj_player.y-405,"instance_player",obj_supermove);
 }
-if instance_position(mouse_x, mouse_y, obj_move) {
-	obj_move.image_index = 1
-	obj_move.image_speed = 0
-}
-else {
-	obj_move.image_index = 0
-	obj_move.image_speed = 0
+if obj_player.movex = true or obj_player.movey = true {
+	instance_destroy(obj_supermove);
 }

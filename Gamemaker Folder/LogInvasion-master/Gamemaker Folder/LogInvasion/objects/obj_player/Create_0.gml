@@ -7,6 +7,7 @@ movey = false;
 moving = 0;
 attacking = false;
 hit = false;
+superused = false;
 
 supercharge = 0;
 superchargemeter = 0;
