@@ -15,6 +15,15 @@ if (spacepressed)
 	supercharge += 10;
 }
 
+var enterpressed;
+enterpressed = keyboard_check_pressed(vk_enter);
+if (enterpressed)
+{
+	playerturn += 1;
+	if playerturn == 2 then playerturn = 0;
+	show_debug_message(playerturn);
+	exit;
+}	
 //supercharge functionality
 superchargemeter = supercharge * 2;
 
@@ -31,23 +40,24 @@ if(supercharge > 100)
 //ends attack
 if (alarm[0] = -1) {
 	obj_player.attacking = false;
+	//playerturn = 0;
 }
 
 
 //Left & right movement
-if keyboard_check_pressed(ord("D")) and moving == 0 {
+if keyboard_check_pressed(ord("D")) and moving == 0 and playerturn = 1{
 movex = true;
 dir = 1;
 moving = 60;
 image_xscale = 1;
 }
-if keyboard_check_pressed(ord("A")) and moving == 0 {
+if keyboard_check_pressed(ord("A")) and moving == 0 and playerturn = 1{
 movex = true;
 dir = -1;
 moving = 60;
 image_xscale = -1;
 }
-if moving > 0 and movex = true {
+if moving > 0 and movex = true and playerturn = 1{
 moving -= 1
 x+= 2*dir
 image_speed = 1;
@@ -62,17 +72,17 @@ image_index = 0;
 
 
 //Up & down movement
-if keyboard_check_pressed(ord("W")) and moving == 0 {
+if keyboard_check_pressed(ord("W")) and moving == 0 and playerturn == 1{
 movey = true;
 dir = 1;
 moving = 60;
 }
-if keyboard_check_pressed(ord("S")) and moving == 0 {
+if keyboard_check_pressed(ord("S")) and moving == 0 and playerturn == 1{
 movey = true;
 dir = -1;
 moving = 60;
 }
-if moving > 0 and movey = true {
+if moving > 0 and movey = true and playerturn == 1{
 moving -= 1
 y -= 2*dir
 image_speed = 1;
@@ -115,9 +125,8 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 }
 //Glowing movement tiles
 /*if soldierTurn = true*/
-if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 
+if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 and playerturn == 1
 {
-	image_alpha = .01;
 	instance_create_layer(obj_player.x+70,obj_player.y-45,"instance_player",obj_move);
 	instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-170,obj_player.y-45,"instance_player",obj_move);
@@ -126,9 +135,9 @@ if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0
 	instance_create_layer(obj_player.x-50,obj_player.y+200,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_move);
-	image_alpha = 1;
 }
-if obj_player.movex = true or obj_player.movey = true {
+if obj_player.movex = true or obj_player.movey = true or playerturn == 0
+{
 	instance_destroy(obj_move);
 }
 if obj_player.superused = true {
@@ -137,6 +146,7 @@ instance_create_layer(obj_player.x-410,obj_player.y-45,"instance_player",obj_sup
 instance_create_layer(obj_player.x-50,obj_player.y+320,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-50,obj_player.y-405,"instance_player",obj_supermove);
 }
-if obj_player.movex = true or obj_player.movey = true {
+if obj_player.movex = true or obj_player.movey = true or playerturn == 1
+{
 	instance_destroy(obj_supermove);
 }

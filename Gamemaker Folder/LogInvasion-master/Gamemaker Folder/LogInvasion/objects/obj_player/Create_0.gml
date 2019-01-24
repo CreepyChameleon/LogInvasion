@@ -8,6 +8,7 @@ moving = 0;
 attacking = false;
 hit = false;
 superused = false;
+playerturn = 0;
 
 supercharge = 0;
 superchargemeter = 0;
