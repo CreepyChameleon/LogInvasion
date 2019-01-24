@@ -58,7 +58,7 @@
             "Key": "1cfd9c76-99bf-4167-96c7-a2ffca8b6525",
             "Value": {
                 "id": "4e045efd-0812-41ae-a79a-033ddfbe744e",
-                "resourcePath": "objects\\obj_movesel\\obj_movesel.yy",
+                "resourcePath": "objects\\obj_supermove\\obj_supermove.yy",
                 "resourceType": "GMObject"
             }
         },

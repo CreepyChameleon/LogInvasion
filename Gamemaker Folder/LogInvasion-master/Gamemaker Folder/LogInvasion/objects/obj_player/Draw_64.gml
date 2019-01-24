@@ -68,6 +68,7 @@ if supercharge >= 100
 			show_debug_message("super ability used");
 			supercharge = 0;
 			damageMutiplier = 2;
+			superused = true; 
 			alarm[3] = 150;
 			audio_play_sound(soldier_super, 10, false);
 		}////
