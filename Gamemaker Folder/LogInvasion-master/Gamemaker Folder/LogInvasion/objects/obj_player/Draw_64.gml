@@ -69,7 +69,7 @@ if supercharge >= 100
 			supercharge = 0;
 			damageMutiplier = 2;
 			superused = true; 
-			alarm[3] = 150;
+			alarm[3] = 15;
 			audio_play_sound(soldier_super, 10, false);
 		}////
 	}///
