@@ -81,3 +81,14 @@ else
 }
 
 draw_sprite(spr_superButton,hover,870,640);
+
+//turn display
+
+draw_set_colour($FF000000 & $ffffff);
+var l6CD21A96_0=($FF000000 >> 24);
+draw_set_alpha(l6CD21A96_0 / $ff);
+
+draw_set_font(font_impact);
+
+if playerturn == 1 then draw_text_transformed(500, 20, string("Your Turn ") + "", 1.5, 1.5, 0);
+if playerturn == 0 then draw_text_transformed(500, 20, string("Their Turn ") + "", 1.5, 1.5, 0);

@@ -57,7 +57,7 @@ dir = -1;
 moving = 60;
 image_xscale = -1;
 }
-if moving > 0 and movex = true and playerturn = 1{
+if moving > 0 and movex = true{
 moving -= 1
 x+= 2*dir
 image_speed = 1;
@@ -82,7 +82,7 @@ movey = true;
 dir = -1;
 moving = 60;
 }
-if moving > 0 and movey = true and playerturn == 1{
+if moving > 0 and movey = true{
 moving -= 1
 y -= 2*dir
 image_speed = 1;
@@ -140,13 +140,13 @@ if obj_player.movex = true or obj_player.movey = true or playerturn == 0
 {
 	instance_destroy(obj_move);
 }
-if obj_player.superused = true  {
+if obj_player.superused = true and playerturn == 1{
 instance_create_layer(obj_player.x+310,obj_player.y-45,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-410,obj_player.y-45,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-50,obj_player.y+320,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-50,obj_player.y-405,"instance_player",obj_supermove);
 }
-if obj_player.movex = true or obj_player.movey = true or playerturn == 1
+if obj_player.movex = true or obj_player.movey = true or playerturn == 0
 {
 	instance_destroy(obj_supermove);
 }
