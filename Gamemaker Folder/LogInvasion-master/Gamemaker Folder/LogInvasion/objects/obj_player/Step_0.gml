@@ -1,16 +1,16 @@
 
 
-var l7AFDFA57_0;
-l7AFDFA57_0 = keyboard_check_pressed(ord("F"));
-if (l7AFDFA57_0)
+var fpressed;
+fpressed = keyboard_check_pressed(ord("F"));
+if (fpressed)
 {
 	if(!variable_instance_exists(id, "__dnd_health")) __dnd_health = 0;
 	__dnd_health += real(-10);
 }
 
-var l451D4E85_0;
-l451D4E85_0 = keyboard_check_pressed(vk_space);
-if (l451D4E85_0)
+var spacepressed;
+spacepressed = keyboard_check_pressed(vk_space);
+if (spacepressed)
 {
 	supercharge += 10;
 }
@@ -115,15 +115,18 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 }
 //Glowing movement tiles
 /*if soldierTurn = true*/
-if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 {
-instance_create_layer(obj_player.x+70,obj_player.y-45,"instance_player",obj_move);
-instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
-instance_create_layer(obj_player.x-170,obj_player.y-45,"instance_player",obj_move);
-instance_create_layer(obj_player.x-290,obj_player.y-45,"instance_player",obj_move);
-instance_create_layer(obj_player.x-50,obj_player.y+80,"instance_player",obj_move);
-instance_create_layer(obj_player.x-50,obj_player.y+200,"instance_player",obj_move);
-instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
-instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_move);
+if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 
+{
+	image_alpha = .01;
+	instance_create_layer(obj_player.x+70,obj_player.y-45,"instance_player",obj_move);
+	instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-170,obj_player.y-45,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-290,obj_player.y-45,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-50,obj_player.y+80,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-50,obj_player.y+200,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_move);
+	image_alpha = 1;
 }
 if obj_player.movex = true or obj_player.movey = true {
 	instance_destroy(obj_move);
