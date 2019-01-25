@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "b89cea9a-1fe9-419c-aeb4-2eca46f5306d",
+            "Value": {
+                "id": "0122e3be-82fe-48d0-b487-30cb411dc17f",
+                "resourcePath": "scripts\\scr_enemyTurn\\scr_enemyTurn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c2ef2c27-b888-42ad-b944-a4a5e0f91af4",
             "Value": {
                 "id": "e264b43a-4629-4728-8fe7-0da8342e95ec",
@@ -384,7 +392,7 @@
         }
     ],
     "script_order": [
-        
+        "b89cea9a-1fe9-419c-aeb4-2eca46f5306d"
     ],
     "tutorial": ""
 }
