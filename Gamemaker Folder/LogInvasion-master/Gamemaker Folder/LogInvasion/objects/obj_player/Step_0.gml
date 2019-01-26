@@ -1,5 +1,3 @@
-
-
 var fpressed;
 fpressed = keyboard_check_pressed(ord("F"));
 if (fpressed)
@@ -63,7 +61,7 @@ x+= 2*dir
 image_speed = 1;
 }
 
-if moving <= 0 and sprite_index = spr_knight {
+if moving <= 0 and sprite_index = spr_knight{
 movex = false;
 movey = false;
 image_speed = 0;

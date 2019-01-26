@@ -28,3 +28,4 @@ var l1D22F97F_0=($FF000000 >> 24);
 draw_set_alpha(l1D22F97F_0 / $ff);
 
 moveRight = 0;
+
