@@ -4,10 +4,6 @@ if obj_player.playerturn == 0 //and enemyturn == 1
 	for (i = 0; i < instance_number(obj_movetile); i += 1)
 	{
 		enemy[i] = instance_find(obj_movetile,i);
-		
-	
-		//inst = scr_enemyTurn(i);
-	
 	}
 
 	if keyboard_check_pressed(vk_space)
@@ -19,9 +15,17 @@ if obj_player.playerturn == 0 //and enemyturn == 1
 		instance = inst[0];
 	}
 	
+	for (i = 0;i < array_length_1d(enemy);i += 1)
+	{
+		inst = scr_enemyTurn(enemy[i]);
+		moving = inst[1];
+		dir = inst[2]
+		movex = inst[3];
+		instance = inst[0];
+	}
 	
 }
-show_debug_message(inst);
+
 
 
 if moving > 0 and movex == 1{
