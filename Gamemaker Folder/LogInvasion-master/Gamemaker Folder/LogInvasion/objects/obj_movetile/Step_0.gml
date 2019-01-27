@@ -1,21 +1,35 @@
 if obj_player.playerturn == 0 //and enemyturn == 1
 {
-	ds_list_clear(instanceList);
 	var i;
 	for (i = 0; i < instance_number(obj_movetile); i += 1)
 	{
-	enemy[i] = instance_find(obj_movetile,i);
-	   }
-	//show_debug_message(enemy);
+		enemy[i] = instance_find(obj_movetile,i);
+		
 	
-	if keyboard_check_pressed(vk_control) then scr_enemyTurn(100002);
+		//inst = scr_enemyTurn(i);
+	
+	}
+
+	if keyboard_check_pressed(vk_space)
+	{	//show_debug_message(inst[0]);
+		inst = scr_enemyTurn(100002);
+		moving = inst[1];
+		dir = inst[2]
+		movex = inst[3];
+		instance = inst[0];
+	}
+	
+	
+}
+show_debug_message(inst);
+
+
+if moving > 0 and movex == 1{
+moving -= 6;
+instance.x += 2*dir
 }
 
-show_debug_message(inst[0]);
-
-if inst[1] > 0 and inst[3] = true
-{
-inst[1] -= 1
-inst[0].x += 2*inst[2]
-image_speed = 1;
+if moving <= 0{
+movex = 0;
+moving = 0;
 }
