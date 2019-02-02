@@ -1,7 +1,7 @@
 instanceId = argument0;//instance ID
 //show_debug_message(instanceId.x);
 //instanceId.x += 1;
-
+show_debug_message("script")
 
 
 movex = 1;
