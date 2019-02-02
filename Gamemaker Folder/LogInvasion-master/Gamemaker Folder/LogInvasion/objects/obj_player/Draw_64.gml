@@ -63,7 +63,7 @@ if supercharge >= 100
 	if point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,645) or point_in_triangle(window_mouse_get_x(),window_mouse_get_y(),872,705,990,705,931,765) //checks if touching button while at 100 SC
 	{///
 		var hover=2;
-		if mouse_check_button_pressed(mb_left) //checks if button is clicked
+		if mouse_check_button_pressed(mb_left) and playerturn == 1 //checks if button is clicked
 		{////
 			show_debug_message("super ability used");
 			supercharge = 0;
