@@ -12,10 +12,16 @@ if enemyturn == 1
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+	if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		scr_ai_init(enemyturn);
 	}	
 }
@@ -29,10 +35,16 @@ if enemyturn == 2
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+	if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		scr_ai_init(enemyturn);
 	}	
 }
@@ -45,10 +57,16 @@ if enemyturn == 3
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+	if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		scr_ai_init(enemyturn);
 	}	
 }
@@ -61,10 +79,16 @@ if enemyturn == 4
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+	if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		scr_ai_init(enemyturn);
 	}	
 }
@@ -77,10 +101,16 @@ if enemyturn == 5
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+	if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		scr_ai_init(enemyturn);
 	}	
 }
@@ -93,10 +123,17 @@ if enemyturn == 6
 		moving -= 1;
 		instance.x += 2*dir;
 	}
+		if moving > 0 and movey = true
+	{
+		moving -= 1;
+		instance.y += 2*dir;
+	}
+
 
 	if moving <= 0
 	{
 		movex = false;
+		movey = false;
 		obj_player.playerturn = 1;
 		enemyturn = 0;
 	}	
