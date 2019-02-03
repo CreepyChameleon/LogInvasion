@@ -5,7 +5,6 @@ if obj_player.playerturn == 0 and enemyturn == 0
 
 if enemyturn == 1
 {
-	show_debug_message("in move")
 	instance = 100002;
 	if moving > 0 and movex = true
 	{
@@ -28,7 +27,6 @@ if enemyturn == 1
 
 if enemyturn == 2
 {
-	show_debug_message("in move")
 	instance = 100003;
 	if moving > 0 and movex = true
 	{
@@ -50,7 +48,6 @@ if enemyturn == 2
 }
 if enemyturn == 3
 {
-	show_debug_message("in move")
 	instance = 100004;
 	if moving > 0 and movex = true
 	{
@@ -72,7 +69,6 @@ if enemyturn == 3
 }
 if enemyturn == 4
 {
-	show_debug_message("in move")
 	instance = 100005;
 	if moving > 0 and movex = true
 	{
@@ -94,7 +90,6 @@ if enemyturn == 4
 }
 if enemyturn == 5
 {
-	show_debug_message("in move")
 	instance = 100006;
 	if moving > 0 and movex = true
 	{
@@ -116,7 +111,6 @@ if enemyturn == 5
 }
 if enemyturn == 6
 {
-	show_debug_message("in move")
 	instance = 100007;
 	if moving > 0 and movex = true
 	{
@@ -134,7 +128,7 @@ if enemyturn == 6
 	{
 		movex = false;
 		movey = false;
-		obj_player.playerturn = 1;
 		enemyturn = 0;
+		obj_player.playerturn = 1;
 	}	
 }

@@ -148,3 +148,8 @@ if obj_player.movex = true or obj_player.movey = true or playerturn == 0
 {
 	instance_destroy(obj_supermove);
 }
+if moveclicked = true and moving == 1
+{
+	obj_player.playerturn = 0; ///
+	moveclicked = false;
+}

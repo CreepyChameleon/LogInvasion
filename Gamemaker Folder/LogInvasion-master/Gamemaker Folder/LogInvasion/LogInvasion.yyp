@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "a5123dc8-ca05-47ea-b8f7-26d22e94f738",
+            "Value": {
+                "id": "c581a2c6-73ce-41d1-9a02-5a1151e6944b",
+                "resourcePath": "sprites\\spr_earth\\spr_earth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b0a3bafe-a409-4330-b1b6-6e76e4adc19a",
             "Value": {
                 "id": "87674fe6-9e11-467a-8b3c-4de5724664f3",

@@ -1,6 +1,5 @@
 turn = argument0;
 var enemy = obj_movetile;
-show_debug_message("scr_ai_init");
 
 turn += 1;
 list = scr_enemyTurn(turn);
