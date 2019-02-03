@@ -8,7 +8,4 @@ inst[3] = false;
 moving = 0;
 dir = 1;
 movex = 0;
-instance = 100002;
 enemygo = true;
-
-u = 0;

@@ -29,3 +29,4 @@ draw_set_alpha(l1D22F97F_0 / $ff);
 
 moveRight = 0;
 
+obj_movetile.enemyturn = 0;

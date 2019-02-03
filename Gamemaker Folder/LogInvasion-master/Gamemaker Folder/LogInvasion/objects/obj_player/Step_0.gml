@@ -19,7 +19,7 @@ if (enterpressed)
 {
 	playerturn += 1;
 	if playerturn == 2 then playerturn = 0;
-	show_debug_message(playerturn);
+	show_debug_message("Turn" + string(playerturn));
 	exit;
 }	
 //supercharge functionality
