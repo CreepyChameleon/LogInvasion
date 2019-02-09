@@ -9,3 +9,9 @@ moving = 0;
 dir = 1;
 movex = 0;
 enemygo = true;
+
+globalvar enemymoving;
+enemymoving = 0;
+
+globalvar enemydir;
+enemydir = 1;

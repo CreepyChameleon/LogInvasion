@@ -10,37 +10,37 @@ if eninst.x > obj_player.x //enemy to the right of the player
 	{
 		var randmove;
 		randmove = choose(1,2);
-		moving = 10 * randmove;
-		dir = -1;
+		enemymoving = 10 * randmove;
+		enemydir = -1;
 		movex = true;
 		movey = false;
-		return [moving, dir, eninst, movex, movey];
+		//return [moving, dir, eninst, movex, movey];
 	}
 	
 	if not place_empty(x+120,y) {  //tile to the left is not open
-		moving = 10;
-		dir = choose(-1,1)
+		enemymoving = 10;
+		enemydir = choose(-1,1)
 		movex = false;
 		movey = true;
-		return [moving, dir, eninst, movex, movey];
+		//return [moving, dir, eninst, movex, movey];
 		
 	}
 }
 	if (eninst.x - obj_player.x) <= 30 and (eninst.x - obj_player.x) >= -30
 	{
 		if (eninst.y - obj_player.x) < 0 {
-		moving = 10;
-		dir = 1;
+		enemymoving = 10;
+		enemydir = 1;
 		movex = false
 		movey = true
-		return [moving, dir, eninst, movex, movey];
+		//return [moving, dir, eninst, movex, movey];
 		}
-				if (eninst.y - obj_player.x) > 0 {
-		moving = 10;
-		dir = -1;
+		if (eninst.y - obj_player.x) > 0 {
+		enemymoving = 10;
+		enemydir = -1;
 		movex = false
 		movey = true
-		return [moving, dir, eninst, movex, movey];
+		//return [moving, dir, eninst, movex, movey];
 		}
 	}
 	
@@ -49,11 +49,15 @@ if eninst.x > obj_player.x //enemy to the right of the player
 
 if eninst.x < obj_player.x //enemy to the left of the player
 {
-	dir = 1;
-	moving = 10;
+	enemydir = 1;
+	enemymoving = 10;
 	movex = true
 	movey = false
-	return [moving, dir, instance, movex, movey];
+	//return [moving, dir, instance, movex, movey];
 }
 
+if eninst.x == obj_player.x
+{
+	show_debug_message("wow");
+}
 //instance_position( x, y, obj );
