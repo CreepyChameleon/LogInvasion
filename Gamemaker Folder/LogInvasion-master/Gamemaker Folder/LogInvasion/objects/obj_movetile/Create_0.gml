@@ -16,4 +16,3 @@ enemymoving = 0;
 globalvar enemydir;
 enemydir = 1;
 move_timer = 0;
-duration_between_moves = 60;

@@ -3,6 +3,7 @@ turn = argument0;
 randomize();
 eninst = instance_find(obj_movetile,(turn-1));
 obj_movetile.enemyturn += 1;
+obj_movetile.move_timer = 0;
 
 	if eninst.x > obj_player.x //enemy to the right of the player
 	{

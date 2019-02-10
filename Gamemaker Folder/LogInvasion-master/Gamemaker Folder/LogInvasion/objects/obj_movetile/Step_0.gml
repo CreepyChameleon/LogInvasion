@@ -61,7 +61,7 @@ if enemyturn == 2
 }
 if enemyturn == 3
 {
-	if (move_timer >= 120 and move_timer < 180) {
+	if (move_timer >= 60 and move_timer < 120) {
 	instance = 100004;
 	if instance_exists(instance)
 	{
@@ -88,7 +88,7 @@ if enemyturn == 3
 }
 if enemyturn == 4
 {
-	if (move_timer >= 180 and move_timer < 240) {
+	if (move_timer >= 60 and move_timer < 120) {
 	instance = 100005;
 	if instance_exists(instance)
 	{
@@ -115,7 +115,7 @@ if enemyturn == 4
 }
 if enemyturn == 5
 {
-		if (move_timer >= 240 and move_timer < 300) {
+		if (move_timer >= 60 and move_timer < 120) {
 	instance = 100006;
 	if instance_exists(instance)
 	{
@@ -142,7 +142,7 @@ if enemyturn == 5
 }
 if enemyturn == 6
 {
-		if (move_timer >= 300 and move_timer < 360) {
+		if (move_timer >= 60 and move_timer < 120) {
 	instance = 100007;
 	if instance_exists(instance)
 	{
