@@ -1,4 +1,4 @@
-move_timer++;
+move_timer += 1;
 if obj_player.playerturn == 0 and enemyturn == 0
 {
 	move_timer = 0;
