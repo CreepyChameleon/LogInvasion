@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "87cea83c-a055-4e48-998e-2960afe0f0cb",
+            "Value": {
+                "id": "061c98f0-4641-4a9f-a7b9-35883d40878b",
+                "resourcePath": "sprites\\spr_healthpack\\spr_healthpack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "900878cb-a1f1-4ae0-99b3-b66ec6c608f7",
             "Value": {
                 "id": "2bd5bc62-4759-41b2-b4a4-60e2fd87f898",
@@ -396,6 +404,14 @@
                 "id": "8e7ab180-e8f8-4db0-a676-d85f1c2aafce",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "f941fadb-e851-46d8-b0b3-4337c6d89672",
+            "Value": {
+                "id": "628d1711-4642-4762-bb5f-2b9f344749ed",
+                "resourcePath": "sprites\\spr_healthpackbutton\\spr_healthpackbutton.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

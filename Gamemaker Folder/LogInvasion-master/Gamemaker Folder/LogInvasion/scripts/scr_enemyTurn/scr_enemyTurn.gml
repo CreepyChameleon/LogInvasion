@@ -4,8 +4,7 @@ randomize();
 		obj_movetile.enemyturn += 1;
 eninst = instance_find(obj_movetile,(turn-1));
 
-if instance_exists(enist)
-{
+
 	if eninst.x > obj_player.x //enemy to the right of the player
 	{
 		if (eninst.x - obj_player.x) >= 120 and place_empty(x+120,y) //if 2 tiles or more to right
@@ -63,4 +62,3 @@ if instance_exists(enist)
 		show_debug_message("wow");
 	}
 	//instance_position( x, y, obj );
-}

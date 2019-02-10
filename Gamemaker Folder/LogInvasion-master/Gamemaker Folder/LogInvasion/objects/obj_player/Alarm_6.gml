@@ -1,1 +1,1 @@
-obj_player.playerturn = 0;
+//obj_player.playerturn = 0;

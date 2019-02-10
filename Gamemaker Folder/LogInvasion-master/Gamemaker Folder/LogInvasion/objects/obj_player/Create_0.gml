@@ -33,3 +33,6 @@ obj_movetile.enemyturn = 0;
 
 globalvar moveclicked;
 moveclicked = false;
+
+globalvar healthpacks;
+healthpacks = 0;
