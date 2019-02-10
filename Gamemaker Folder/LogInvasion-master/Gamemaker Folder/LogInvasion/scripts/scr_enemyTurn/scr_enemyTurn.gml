@@ -1,9 +1,8 @@
 //need to eventually compare instance position to player position, 
 turn = argument0;
 randomize();
-		obj_movetile.enemyturn += 1;
 eninst = instance_find(obj_movetile,(turn-1));
-
+obj_movetile.enemyturn += 1;
 
 	if eninst.x > obj_player.x //enemy to the right of the player
 	{
@@ -15,6 +14,7 @@ eninst = instance_find(obj_movetile,(turn-1));
 			enemydir = -1;
 			movex = true;
 			movey = false;
+			
 			//return [moving, dir, eninst, movex, movey];
 		}
 	

@@ -1,9 +1,11 @@
+move_timer++;
 if obj_player.playerturn == 0 and enemyturn == 0
 {
+	move_timer = 0;
 	scr_ai_init(enemyturn);
 }
 
-if enemyturn == 1
+if enemyturn == 1 
 {
 	instance = 100002;
 	if instance_exists(instance)
@@ -29,8 +31,9 @@ if enemyturn == 1
 	else enemyturn += 1;
 }
 
-if enemyturn == 2
+if enemyturn == 2 
 {
+	if (move_timer >= 60 and move_timer < 120) {
 	instance = 100003;
 	if instance_exists(instance)
 	{
@@ -50,12 +53,15 @@ if enemyturn == 2
 			movex = false;
 			movey = false;
 			scr_ai_init(enemyturn);
+	
 		}	
 	}	
 	else enemyturn += 1;
 }
+}
 if enemyturn == 3
 {
+	if (move_timer >= 120 and move_timer < 180) {
 	instance = 100004;
 	if instance_exists(instance)
 	{
@@ -79,8 +85,10 @@ if enemyturn == 3
 	}
 	else enemyturn += 1;
 }
+}
 if enemyturn == 4
 {
+	if (move_timer >= 180 and move_timer < 240) {
 	instance = 100005;
 	if instance_exists(instance)
 	{
@@ -104,8 +112,10 @@ if enemyturn == 4
 	}
 	else enemyturn += 1;
 }
+}
 if enemyturn == 5
 {
+		if (move_timer >= 240 and move_timer < 300) {
 	instance = 100006;
 	if instance_exists(instance)
 	{
@@ -129,8 +139,10 @@ if enemyturn == 5
 	}
 	else enemyturn += 1;
 }
+}
 if enemyturn == 6
 {
+		if (move_timer >= 300 and move_timer < 360) {
 	instance = 100007;
 	if instance_exists(instance)
 	{
@@ -152,7 +164,9 @@ if enemyturn == 6
 			movey = false;
 			enemyturn = 0;
 			obj_player.playerturn = 1;
+			move_timer = 0;
 		}	
 	}
 	else enemyturn += 1;
+}
 }
