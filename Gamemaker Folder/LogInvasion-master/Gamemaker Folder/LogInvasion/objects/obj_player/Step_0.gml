@@ -123,7 +123,7 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 }
 //Glowing movement tiles
 /*if soldierTurn = true*/
-if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 and playerturn == 1
+if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 and playerturn == 1 and moveclicked = false
 {
 	instance_create_layer(obj_player.x+70,obj_player.y-45,"instance_player",obj_move);
 	instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
@@ -134,11 +134,11 @@ if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 and playerturn 
 	instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y-285,"instance_player",obj_move);
 }
-if obj_player.movex = true or obj_player.movey = true or playerturn == 0
+if obj_player.movex = true or obj_player.movey = true or playerturn == 0 or moveclicked = true
 {
 	instance_destroy(obj_move);
 }
-if obj_player.superused = true and playerturn == 1{
+if obj_player.superused = true and playerturn == 1 and moveclicked = false{
 instance_create_layer(obj_player.x+310,obj_player.y-45,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-410,obj_player.y-45,"instance_player",obj_supermove);
 instance_create_layer(obj_player.x-50,obj_player.y+320,"instance_player",obj_supermove);
@@ -148,8 +148,7 @@ if obj_player.movex = true or obj_player.movey = true or playerturn == 0
 {
 	instance_destroy(obj_supermove);
 }
-if moveclicked = true and moving == 1
+if moveclicked = true and moving == 1 and obj_player.attacking = false
 {
-	obj_player.playerturn = 0; ///
-	moveclicked = false;
+	alarm[7] = 10;
 }
