@@ -35,11 +35,7 @@ if(supercharge > 100)
 	supercharge = 100;
 }
 
-//ends attack
-if (alarm[0] = -1) {
-	obj_player.attacking = false;
-	//playerturn = 0;
-}
+
 
 
 //Left & right movement
@@ -150,5 +146,8 @@ if obj_player.movex = true or obj_player.movey = true or playerturn == 0
 }
 if moveclicked = true and moving == 1 and obj_player.attacking = false
 {
-	alarm[7] = 10;
+	alarm[7] = 20;
+}
+if obj_player.attacking = true {
+	alarm[7] = 180;
 }
