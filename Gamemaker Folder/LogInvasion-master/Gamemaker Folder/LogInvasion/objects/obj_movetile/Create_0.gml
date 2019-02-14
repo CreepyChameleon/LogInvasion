@@ -16,3 +16,4 @@ enemymoving = 0;
 globalvar enemydir;
 enemydir = 1;
 move_timer = 0;
+image_speed = 0;
