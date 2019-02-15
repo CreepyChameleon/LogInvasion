@@ -148,18 +148,34 @@ if eninst.x > obj_player.x //enemy to right of player
 			}
 		}
 	}
-	if (eninst.x - obj_player.x) >= 480 //three or more tiles to the right
+	if (eninst.x - obj_player.x) == 480 //three or more tiles to the right
 	{
 		var weighted_choice = round(random_range(1, 20));
 		show_debug_message(weighted_choice);
 		if weighted_choice == 1 //more likely to move towards player
 		{
 			show_debug_message("move right away from enemy");
+			enemymoving = 14;
+			enemydir = 1;
+			movex = true;
+			movey = false;
 		}
 		if weighted_choice != 1 // 1/20 chance to run away
 		{
 			show_debug_message("move left towards enemy");
+			enemymoving = 14;
+			enemydir = -1;
+			movex = true;
+			movey = false;	
 		}
+	}
+	if (eninst.x - obj_player.x) == 640 //if 4+ tiles to the right, not visible
+	{
+		show_debug_message("four tiles to the right, no movement");
+		enemymoving = 0; //doesnt move at all
+		enemydir = -1;
+		movex = true;
+		movey = false;
 	}
 }
 if eninst.x < obj_player.x
