@@ -121,10 +121,10 @@ if(gamepad_is_connected(l02474BFD_0) && gamepad_button_check_pressed(l02474BFD_0
 /*if soldierTurn = true*/
 if place_empty(obj_player.x+70, obj_player.y-45) and moving == 0 and playerturn == 1 and moveclicked = false
 {
-	instance_create_layer(obj_player.x+160,obj_player.y-45,"instance_player",obj_move);
-	//instance_create_layer(obj_player.x+190,obj_player.y-45,"instance_player",obj_move);
-	instance_create_layer(obj_player.x-170,obj_player.y-45,"instance_player",obj_move);
-	instance_create_layer(obj_player.x-290,obj_player.y-45,"instance_player",obj_move);
+	instance_create_layer(obj_player.x+95,obj_player.y-60,"instance_player",obj_move);
+	instance_create_layer(obj_player.x+255,obj_player.y-60,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-215,obj_player.y-60,"instance_player",obj_move);
+	instance_create_layer(obj_player.x-350,obj_player.y-60,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y+80,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y+200,"instance_player",obj_move);
 	instance_create_layer(obj_player.x-50,obj_player.y-165,"instance_player",obj_move);
