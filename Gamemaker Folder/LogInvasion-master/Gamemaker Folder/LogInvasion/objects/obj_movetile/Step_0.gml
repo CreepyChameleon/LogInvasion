@@ -7,7 +7,7 @@ if obj_player.playerturn == 0 and enemyturn == 0
 
 if enemyturn == 1 
 {
-	instance = 100002;
+	var instance = 100002;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -41,7 +41,7 @@ if enemyturn == 1
 if enemyturn == 2 
 {
 	if (move_timer >= 60 and move_timer < 120) {
-	instance = 100003;
+	var instance = 100003;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -76,7 +76,7 @@ if enemyturn == 2
 if enemyturn == 3
 {
 	if (move_timer >= 60 and move_timer < 120) {
-	instance = 100004;
+	var instance = 100004;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -111,7 +111,7 @@ if enemyturn == 3
 if enemyturn == 4
 {
 	if (move_timer >= 60 and move_timer < 120) {
-	instance = 100005;
+	var instance = 100005;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -146,7 +146,7 @@ if enemyturn == 4
 if enemyturn == 5
 {
 		if (move_timer >= 60 and move_timer < 120) {
-	instance = 100006;
+	var instance = 100006;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -181,7 +181,7 @@ if enemyturn == 5
 if enemyturn == 6
 {
 		if (move_timer >= 60 and move_timer < 120) {
-	instance = 100007;
+	var instance = 100007;
 	if instance_exists(instance)
 	{
 		if moving > 0
@@ -212,6 +212,6 @@ if enemyturn == 6
 			move_timer = 0;
 		}
 	}
-	else enemyturn += 1;
+	else enemyturn = 0;
 }
 }
