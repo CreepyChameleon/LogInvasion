@@ -22,15 +22,12 @@ if instance_exists(eninst)
 				show_debug_message(weighted_choice);
 				if weighted_choice == 1 or weighted_choice == 2 //more likely to move towards player
 				{
-					if !place_empty(eninst.x - 160, eninst.y)
-					{
-						show_debug_message("occupied");
-					}
 					show_debug_message("move right away from enemy");
 					enemymoving = 14;
 		  			enemydir = 1;
 					movex = true;
 					movey = false;	
+					return eninst;
 				}	
 				if weighted_choice != 1 and weighted_choice != 2 // 8/10 chance to attack
 				{
